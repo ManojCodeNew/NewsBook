@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import News from './news';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types'
+import LoadingBar from 'react-top-loading-bar';
+// import Navbar from './navbar';
 
 export default class Mainarea extends Component {
     static defaultProps = {
@@ -22,13 +24,18 @@ export default class Mainarea extends Component {
             page: 2,
             totalResults: 0,
             loading: true,
-            country: 'in'
+            country: 'in',
+            progress: 0,
         })
     }
     async updatepage() {
+        this.setState(() => ({
+            progress: 10,
+        }))
         let api = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=b1aee878476a48c1be0344d6c2cabe9c&page=${this.state.page}&pageSize=5`;
         this.setState(() => ({
             loading: true,
+            progress: 30,
         }))
         let fetchapi = await fetch(api);
         let jsonapi = await fetchapi.json();
@@ -40,7 +47,9 @@ export default class Mainarea extends Component {
             totalResults: totalResults,
             loading: false,
             count: 0,
+            progress: 100,
         }));
+
     }
     async componentDidMount() {
         this.updatepage();
@@ -73,9 +82,9 @@ export default class Mainarea extends Component {
         document.title = `${capitalizedtitle}-NewsBook`;
         return (
             <>
+                <LoadingBar color='yellow' height={3} progress={this.state.progress} />
                 <div className=''>
                     <h1 className='text-xl font-boldfontsize-md  text-center text-black mb-3 mt-3'><strong><span className='bg-black text-white p-1 rounded'>NewsBook -TOP <span className='text-red-600'>{capitalizedtitle}</span> HeadLines</span></strong></h1>
-
                     {this.state.loading && <Spinner />}
                     <div className='flex flex-wrap justify-center'>
                         {!this.state.loading && this.state.articles.map((e, key) => {

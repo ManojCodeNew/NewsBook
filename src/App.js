@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from './components/navbar'
 import Mainarea from './components/Mainarea'
-// import { RouterProvider } from 'react-router-dom'
+// import LoadingBar from 'react-top-loading-bar'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,8 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 
-
-const router=createBrowserRouter(
+  const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Navbar/>}>
       <Route path='/' element={<Mainarea key='general' category="general"/>}/>
@@ -25,10 +24,13 @@ const router=createBrowserRouter(
   )
 )
 
+  
 export default class App extends Component {
+
   render() {
     return (
         <div>
+
         <RouterProvider router={router}/>
       </div>
     )

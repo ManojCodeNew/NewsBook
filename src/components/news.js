@@ -9,8 +9,8 @@ let notfoundimg="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon
         <>
         <div className='max-w-sm mx-auto bg-white rounded-lg shadow-md m-2' >
                 <div className='w-70 h-100 bg-gray-200 p-4 m-4 '>
-                    <div className='bg-gradient-to-r from-red-600 to-red-900 hover:from-pink-500 hover:to-yellow-500 text-md'>
-                    <h2 className='pl-3'>  {source_name} </h2>
+                    <div className='bg-gradient-to-r from-red-600 to-red-900 hover:from-black hover:to-black text-md'>
+                    <h2 className='pl-3 font-semibold text-white'>  {source_name} </h2>
                     </div>
                     <img src={!urlImage?notfoundimg:urlImage} className="w-full h-48" alt='Loading...'/>
                     <div className="p-2 m-1">
