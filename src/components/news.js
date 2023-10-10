@@ -17,7 +17,7 @@ let notfoundimg="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon
                         <h1 className=""><strong>{title}</strong></h1>
                         <p className=" m-2 ">{description}...</p>
                         <p className='pb-3 text-gray-600'><small>By {!source_name?"Unknown":source_name} on {new Date(date).toGMTString()}</small></p>
-                        <a href={url} className="bg-gray-600 text-white p-2 rounded mb-9">Read More</a>
+                        <a href={url} className="bg-gray-600 text-white p-2 rounded mb-9 hover:bg-gradient-to-r from-blue-600 to-red-900 hover:rounded-2xl">Read More</a>
                     </div>
             </div>
         </div>
