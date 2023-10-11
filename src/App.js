@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './components/navbar'
 import Mainarea from './components/Mainarea'
-// import LoadingBar from 'react-top-loading-bar'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,8 +11,8 @@ import {
   const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Navbar/>}>
-      <Route path='/' element={<Mainarea key='general' category="general"/>}/>
-      <Route path='/:General' element={<Mainarea key='general' category="General"/>} />
+      <Route path='/' element={<Mainarea key='General' category="General"/>}/>
+      <Route path='/:General' element={<Mainarea key='General' category="General"/>} />
       <Route path='/Business' element={<Mainarea key='Business' category="Business"/>} />
       <Route path='/Entertainment' element={<Mainarea key='Entertainment' category="Entertainment"/>} />
       <Route path='/Health' element={<Mainarea key='Health' category="Health"/>} />
@@ -26,11 +25,9 @@ import {
 
   
 export default class App extends Component {
-// LoadingBar=this.props.setProgress;
   render() {
     return (
         <div>
-      {/* <LoadingBar/> */}
         <RouterProvider router={router}/>
       </div>
     )

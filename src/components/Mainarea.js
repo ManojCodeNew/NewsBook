@@ -137,5 +137,3 @@ export default class Mainarea extends Component {
         )
     }
 }
-
-// setProgress={<LoadingBar color='yellow' height={3} progress={this.state.progress} />}
