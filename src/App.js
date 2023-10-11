@@ -26,11 +26,11 @@ import {
 
   
 export default class App extends Component {
-
+// LoadingBar=this.props.setProgress;
   render() {
     return (
         <div>
-
+      {/* <LoadingBar/> */}
         <RouterProvider router={router}/>
       </div>
     )
