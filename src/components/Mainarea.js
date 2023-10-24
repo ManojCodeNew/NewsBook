@@ -124,12 +124,6 @@ export default class Mainarea extends Component {
                             })}
                         </div>
                         </InfiniteScroll>
-        
-                    {/* <div className='flex justify-between m-2 p-3'>
-                        {/* Important {`<-Previous`}  */}
-                        {/* <button type="button" disabled={(this.state.page <= 2)} className="bg-blue-500 text-white justify-start p-2 m-2 rounded-md" onClick={this.handlePrevclick}>{`<- Previous`}</button>
-                        <button type="button" disabled={(this.state.page + 1 > Math.ceil(this.setState.totalResults / 5))} className="bg-blue-500 text-white justify-end p-2 m-2 rounded-md" onClick={this.handleNextclick}> {`Next ->`}</button> */}
-                    {/* </div>  */}
                 </div>
                 
 

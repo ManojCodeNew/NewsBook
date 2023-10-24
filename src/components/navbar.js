@@ -11,8 +11,8 @@ export default class navbar extends Component {
                     </div>
                 </nav>
                 <div className='flex flex-row text-black' >
-                    <NavLink key="general" to='/general' className="p-1 mr-4 hover:text-yellow-600 " >Home</NavLink >
-                    <NavLink key="business" to='/business' className="p-1 mr-4  hover:text-yellow-600">Business</NavLink>
+                    <NavLink key="general" to='/' className="p-1 mr-4 hover:text-yellow-600 " >Home</NavLink >
+                    <NavLink key="business" to='/Business' className="p-1 mr-4  hover:text-yellow-600">Business</NavLink>
                     <NavLink key="Entertainment" to='/Entertainment' className="p-1 mr-4 hover:text-yellow-600">Entertainment</NavLink >
                     <NavLink key="General" to='/General' className="p-1 mr-4 hover:text-yellow-600">General</NavLink >
                     <NavLink key="Health" to='/Health' className="p-1 mr-4 hover:text-yellow-600">Health</NavLink >
